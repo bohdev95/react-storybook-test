@@ -40,6 +40,7 @@ function DragableComponent() {
             setChecked={setChecked}
             search={search}
             dispatch={dispatch}
+            checked={checked}
           />
           <SavablesContentBody
             getData={getData}

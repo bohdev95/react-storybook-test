@@ -11,6 +11,7 @@ function DragableContentCard({
 }) {
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
+
     const newChecked = [...checked];
     if (currentIndex === -1) {
       const selectedObject = item.filter((data) => data.value === value);
@@ -20,6 +21,9 @@ function DragableContentCard({
     }
     setChecked(newChecked);
   };
+
+
+    
   return (
     <Draggable key={items.index} draggableId={items.labelId} index={items.index}>
       {(provided) => (

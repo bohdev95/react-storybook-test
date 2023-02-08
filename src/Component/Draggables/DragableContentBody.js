@@ -24,6 +24,8 @@ function DragableContentBody({
     Items.splice(result.destination.index, 0, reorderedItem);
     dispatch(rotateItems(Items));
   }
+
+
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Droppable droppableId="characters">
@@ -42,6 +44,7 @@ function DragableContentBody({
                 const labelId = `list-item-${index}`;
                 return (
                   <DragableContentCard
+                    key={index}
                     items={{value,label,index,labelId}}
                     item={items}
                     checked={checked}
