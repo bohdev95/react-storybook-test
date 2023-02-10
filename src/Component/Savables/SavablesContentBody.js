@@ -41,7 +41,7 @@ function SavablesContentBody({getData,dispatch}) {
                   bgcolor: "background.paper",
                   maxHeight: "70px",
                   minHeight: "50px",
-                  overflowY: getData?.length > 2 ? "scroll" : "hidden",
+                  overflowY: "auto",
                    "&::-webkit-scrollbar": {
                     width: 20
                   },
