@@ -27,8 +27,9 @@ function SavablesContentBody({getData,dispatch}) {
         expandIcon={<ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
+        sx={{ "flex-direction": "row-reverse"}}
       >
-        <Typography>Saved</Typography>
+        <Typography sx={{"padding-left":"10px"}}>Saved</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <DragDropContext onDragEnd={handleOnDragEndItems}>
@@ -41,6 +42,15 @@ function SavablesContentBody({getData,dispatch}) {
                   maxHeight: "70px",
                   minHeight: "50px",
                   overflowY: getData?.length > 2 ? "scroll" : "hidden",
+                   "&::-webkit-scrollbar": {
+                    width: 20
+                  },
+                  "&::-webkit-scrollbar-thumb": {
+                    backgroundColor: "#1976d2",
+                    borderRadius: 8,
+                    border: "6px solid transparent",
+                    "background-clip": "content-box"
+                  },
                 }}
                 {...provided.droppableProps}
                 ref={provided.innerRef}

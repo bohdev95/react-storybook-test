@@ -25,13 +25,26 @@ function DragableContentBody({
     dispatch(rotateItems(Items));
   }
 
-
   return (
     <DragDropContext onDragEnd={handleOnDragEnd}>
       <Droppable droppableId="characters">
         {(provided) => (
           <Box
-            sx={{ width: "100%", minHeight: "350px" }}
+            sx={{ width: "100%", height: "300px", overflow:"auto",
+           "&::-webkit-scrollbar": {
+              width: 20
+            },
+            "&::-webkit-scrollbar-track": {
+              backgroundColor: "#F9F9F9",
+              border: "solid 1px #DFE1E6"
+            },
+            "&::-webkit-scrollbar-thumb": {
+              backgroundColor: "#1976d2",
+              borderRadius: 8,
+              border: "6px solid transparent",
+              "background-clip": "content-box"
+            },
+          }}
             className="characters"
             {...provided.droppableProps}
             ref={provided.innerRef}

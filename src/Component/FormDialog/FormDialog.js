@@ -19,7 +19,7 @@ export default function FormDialog({ callback }) {
 	};
 	return (
 		<Box sx={{ display: "flex", alignitems: 'center', justifyContent: "center", my: 1 }}>
-			<Button variant="contained" onClick={handleClickOpen}>
+			<Button sx={{ width:"80%", 'border-radius':"6px" }} variant="contained" onClick={handleClickOpen}>
 				Save Status
 			</Button>
 			<Dialog open={open} onClose={handleClose}>
